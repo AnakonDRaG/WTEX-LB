@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/TableLoader.js"></script>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light p-0 mb-2">
+        <div class="container">
+            <div class="collapse navbar-collapse " id="navbarAbout">
+                <ul class="navbar-nav ml-auto small">
+                    <li class="nav-item ">
+                        <a class="nav-link" aria-current="page" href="#">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Доставка та оплата</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Гарантія та повернення</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Інформація</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="logo-header-box mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="logo-text  text-uppercase">
+                        <b>Smart </b><b class="text-green">equipment</b>
+                    </h1>
+                </div>
+                <div class="col ">
+                    <div class="vertical-center h-100 ">
+                        <div id="UserProfileMini" class="user-profile-mini  ml-auto">
+                            <div class="user-search d-inline-flex mr-3 text-green">
+                                <form action="GET" class="vertical-center">
+                                    <input type="search" name="" id="" placeholder="Поиск" class="h-100" style="width:350px">
+                                    <button type="submit" class="btn m-0">
+                                        <i class="icon fas fa-search text-green"></i>
+                                    </button>
+                                </form>
+
+
+                            </div>
+                            <div class="user-icon d-inline-flex mr-4 text-green">
+                                <i class="icon fas fa-user m-auto"></i>
+                            </div>
+                            <div class="user-shopcart d-inline-flex mr-1 text-green">
+                                <i class="icon fas fa-shopping-cart"></i>
+                                <span class="product-count text-center small text-dark">0</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light bg-green p-0">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarID">
+                <div id="NavbarCatalog" class="navbar-nav">
+                    <a class="nav-link bg-green-dark vertical-center text-white h-100 pl-4 pr-4 font-weight-bold" aria-current="page" href="#"><i class="fas fa-bars mr-2"></i>Каталог товаров<i class="fas fa-caret-down ml-2"></i></a>
+                    <a class="nav-link text-white vertical-center   pl-4 pr-4" aria-current="page" href="#"><i class="fas fa-certificate mr-2"></i>Новинки</a>
+                    <a class="nav-link text-white vertical-center" aria-current="page" href="#"><i class="far fa-star mr-2 icon-nav-bl"></i>Скидки</a>
+                    <a class="nav-link text-white vertical-center" aria-current="page" href="#"><i class="fab fa-hotjar mr-2 icon-nav-bl"></i>Промо акции</a>
+                    <a class="nav-link text-white vertical-center" aria-current="page" href="#"><i class="fas fa-wrench mr-2 icon-nav-bl"></i>Сервисный ценрт</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="container mt-xl-5">
+        <div id="Inputs" class="text-center">
+            <div id="inputs-box">
+                <input type="text" id="Input-1" placeholder="Назва">
+                <input type="text" id="Input-2" placeholder="Адреса">
+                <input type="text" id="Input-3" placeholder="Телефони офісу">
+                <input type="text" id="Input-4" placeholder="Час роботи">
+            </div>
+            <div class="mt-3 mb-3">
+                <input type="button" value="Добавить в таблицу" onclick="AddToTable()">
+                <input type="button" value="Удалить последний елемент" onclick="RemoveLastElementInTable()">
+            </div>
+        </div>
+        <table id="MainTable">
+            <thead>
+                <tr>
+                    <th>Назва</th>
+                    <th>Адреса</th>
+                    <th>Телефони офісу</th>
+                    <th>Час роботи</th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+</body>
+<footer class="bg-green pb-5 pt-5 mt-5">
+    <div class="container">
+        <h1 class="h3 p-5 text-center text-light">Діяльність підприємства – торгівля комп’ютерами.</h1>
+        <div class="row">
+            <div class="col-2 vertical-center">
+                <ul class="list-unstyled">
+                    <li class="mt-0">
+                        <a href="index.html" class="text-decoration-none text-dark bg-green-dark p-1 pl-4 pr-4">Главная</a>
+                    </li>
+                    <li class="mt-4">
+                        <a href="about.html" class="text-decoration-none text-dark bg-green-dark  p-1 pl-4 pr-4">Про нас</a>
+                    </li>
+                    <li class="mt-4">
+                        <a href="tableExample.html" class="text-decoration-none text-dark bg-green-dark  p-1 pl-4 pr-4 ">Таблица</a>
+                    </li>
+                    <li class="mt-4">
+                        <a href="todoList.html" class="text-decoration-none text-dark bg-green-dark  p-1 pl-4 pr-4">Список дел</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe magni suscipit deserunt est voluptatibus? Quis modi commodi delectus expedita optio nostrum eius quo, architecto vitae beatae similique minima, quod accusantium ut cupiditate. Illo, quos iusto
+                delectus ducimus in voluptatum magni nesciunt sed illum vero nulla sint minima officiis rem veniam.
+            </div>
+            <div class="col  small">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem consectetur debitis fugiat temporibus adipisci ducimus iure quis suscipit ex maxime, rerum numquam ipsum harum necessitatibus dolorem? Deserunt quidem in sint, fugiat placeat repellendus
+                eos obcaecati debitis, sapiente unde ratione iure dolores soluta, ducimus libero dicta quis eligendi cum nisi deleniti porro. Esse, iusto autem quidem voluptatibus aliquid accusantium perspiciatis excepturi iste, ducimus voluptates quibusdam.
+                Esse a asperiores, sit, nobis laudantium nihil repellat provident, repellendus praesentium magnam rem perferendis itaque? Laborum tempore suscipit pariatur ratione molestiae provident voluptatem velit veritatis enim veniam, culpa exercitationem
+                libero et quisquam, corrupti mollitia quis iste?
+            </div>
+        </div>
+        <div class="text-right mt-5">
+            +380000000000 вул. где-то там.
+        </div>
+    </div>
+</footer>
+
+</html>
